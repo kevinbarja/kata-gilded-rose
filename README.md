@@ -1,32 +1,36 @@
-# Kata GildedRose #
+### Tarea Grupal # 3 : TDD Gilded Rose
 
-## Descripción ##
-Bienvenidos al equipo SOE. Hace algun tiempo atras el cliente GildedRose nos pidió realizar un programa para mantener el inventario de sus productos (ítems). En aquella época le encargamos el trabajo a Pablo, que ahora ya no trabaja con nosotros. Ahora el cliente nos ha pedido añadir una nueva funcionalidad al programa. Se desea vender una nueva categoría de ítems.
-Primeramente entendamos de qué se trata el sistema:
+#### Integrantes del grupo # 3:
+- Aguilar Perez Kleber Isaac
+- Barja Hoyos Kevin Eduardo
+- Cano Encinas Patricia
+- Aillon Salinas Raúl Fernando
 
- - Todos los ítems tienen un valor **sellIn**(venderEn) que indica la cantidad de días que se tiene para vender el item
- - Todos los ítems tienen un valor **Quality** que indica el valor del item.
- - Al final de cada día, el programa baja los valores para cada ítem.
+#### Introducción
 
-El programa es simple, ¿verdad? En realidad, esto es lo que lo hace interesante:
+Durante la sesión en línea de la semana 2, presentamos el [taller de TDD: Gilded Rose, desde la perspectiva Tester](https://youtu.be/8LSXMItMNtI).
 
- - Una vez que la cantidad de días para vender el item ha llegado al punto mínimo (cero días), el **Quality** se degrada el doble de rápido.
- - El **Quality** de un ítem nunca es un número negativo.
- - El item “Aged Brie" incrementa su **Quality** a medida que envejece.
- - El Quality de un ítem nunca es más que 50.
- - El producto “Sulfuras" es legendario y nunca cambia su **Quality**.
- - El item “Backstage passes", como el “Aged Brie", incrementa su **Quality** a medida que se acerca a su valor de **sellIn**: el **Quality** se duplica cuando hay 10 días o menos, se triplica cuando hay 5 días o menos, y se anula cuando se pasó la fecha de venta.
+Para la presente tarea grupal, se requiere elaborar los requerimientos y agregarlos al [documento compartido](https://docs.google.com/spreadsheets/d/1lTKd4vPwAnfR_FMv43RK3UBfenFcgP8HWeqHzhGDfuU/edit?usp=sharing).
 
-Se ha pedido a Crispin implementar la siguiente funcionalidad:
-Comercialización de items “Conjured”. Los items “Conjured" (encantados) degradan su **Quality** dos veces mas rapido que los items normales.
-Se puede hacer cambios al método **updateQuality** y añadir código mientras todo siga funcionando correctamente. Hay que tener cuidado con la clase Item porque se usa en otros programas. De preferencia no hay que tocarla, pero si puedes hacer cambios para hacer que siga funcionando como antes y alguna funcionalidad extra, está bien.
 
-Una aclaracion final. Un item no puede incrementar su **Quality** mas de 50. El caso especial es “Sulfuras" que es un item legendario y por tanto su calidad es 80 y permanece inalterable.
+Además por cada requerimiento agregado se deben agregar los casos de prueba que el grupo considere necesarios.
 
-Crispin mira el código legado y hace una mueca de asombro. No está acostumbrado a ver código verborrágico y poco estructurado. El es especialista en TDD y piensa cómo aplicar refactorizaciones en el código y añadir nueva funcionalidad. Luego de un par de horas entrega al responsable de la oficina la siguiente lista de tareas:
+#### Fecha de presentación 
 
- - Anadir pruebas que permitan asegurar que la funcionalidad actual funcionara correctamente a pesar de introducirse cambios en el sistema. (Ya esta hecho)
- - Añadir la nueva funcionalidad requerida al programa.
- - Mejorar la clase GildedRose para tener código limpio, legible y extensible.
+Jueves 1 de abril 19:00.
 
-Fuente original: https://github.com/dshefman/GildedRoseAS3
+#### Intrucciones
+
+1. Cada grupo analiza el [sistema Gilded Rose](gilded-rose.md) (asumiendo que se lo construirá de 0)
+2. Cada grupo debe agregar los requerimientos que considere necesarios en el [documento compartido](https://docs.google.com/spreadsheets/d/1lTKd4vPwAnfR_FMv43RK3UBfenFcgP8HWeqHzhGDfuU/edit?usp=sharing) (tab requerimientos)
+3. Cada grupo debe adicionar los casos de prueba que considere necesarios para probar el requerimiento agregado (Tab Pruebas)
+4. Por cada caso de prueba agregado, el equipo debe aplicar TDD para la implementación en el sistema
+5. Cada equipo debe contar con una solución completa que pueda ejecutar todos los casos (no es necesario UI, solo que todos los requerimientos esten respaldados por pruebas)
+6. El equipo puede implementar la solución en cualquier stack **(excepto JAVA)**
+
+#### Criterios de aceptación
+
+1. El equipo publicará un enlace de acceso público al repositorio que contiene la solución
+2. Cada miembro del equipo debe agregar #equipo + enlace como entrega de la tarea
+3. **Durante la siguiente sesión online, de forma aleatoria se evaluará el análisis, implementación y las decisiones tomadas respecto de las pruebas por medio de pruebas Docente -> Grupo**
+4. Para la sesión en online el equipo debe contar con al menos un participante que tenga todo el ambiente preparado para demostrar la ejecución de todas las pruebas implementadas.
