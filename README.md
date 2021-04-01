@@ -34,3 +34,14 @@ Jueves 1 de abril 19:00.
 2. Cada miembro del equipo debe agregar #equipo + enlace como entrega de la tarea
 3. **Durante la siguiente sesión online, de forma aleatoria se evaluará el análisis, implementación y las decisiones tomadas respecto de las pruebas por medio de pruebas Docente -> Grupo**
 4. Para la sesión en online el equipo debe contar con al menos un participante que tenga todo el ambiente preparado para demostrar la ejecución de todas las pruebas implementadas.
+
+#### Bitacora del grupo
+1.- Elegimos c# porque la mayoría conoce.
+2.- Organizamos la solución en dos proyectos GildedRose y UnitTestGildedRose, este último tiene dependencia con el framework xUnit y con el proyecto GildedRose.
+
+
+**Nuget package manager console commands:**
+install-package xUnit
+install-package xUnit.runner.console
+install-package xUnit.runner.visualstudio
+update-package
